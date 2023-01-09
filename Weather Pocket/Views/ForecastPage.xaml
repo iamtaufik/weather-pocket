@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Weather_Pocket.Views.ForecastPage"
+             Title="Kondisi Cuaca Hari Ini">
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand"  
+              VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                    <BoxView Grid.RowSpan="2" 
+                             BackgroundColor="#ABABAB" 
+                             HorizontalOptions="FillAndExpand" 
+                             VerticalOptions="FillAndExpand"/>
+                    <Image x:Name="bgImg" 
+                           Aspect="AspectFill" 
+                           Grid.RowSpan="2" 
+                           Source="bg.png" 
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="End"/>
+                <Button Text="Kembali"
+                            TextColor="#fff"
+                            BackgroundColor="Transparent"
+                            WidthRequest="100" 
+                            HeightRequest="50" 
+                            HorizontalOptions="Start" 
+                            VerticalOptions="Center"     
+                            Clicked="BackPage"/>
+                <ScrollView Grid.Row="1">
+                <Grid Margin="20,10,20,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="70"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" 
+                                         Orientation="Horizontal"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="CenterAndExpand">
+                                <Label x:Name="timeTxt1"
+                                       TextColor="#fff"
+                                       HorizontalOptions="Start" 
+                                       VerticalOptions="Center"
+                                       FontSize="Body"/>
+                            </StackLayout >
+                            <StackLayout Grid.Column="1" 
+                                         Orientation="Vertical" 
+                                         HorizontalOptions="End">
+                                <Image x:Name="iconImg1"
+                                       WidthRequest="30"
+                                       HeightRequest="30"/>
+                                <Label x:Name="descriptionTxt1"
+                                       TextColor="#fff"
+                                       VerticalOptions="Center"
+                                       FontSize="Body"/>
+                            </StackLayout>
+                        </Grid>
+                        <Grid Grid.Row="1" 
+                              Margin="0,10,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" 
+                                         Orientation="Horizontal"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="CenterAndExpand">
+                                <Label x:Name="timeTxt2"
+                                       TextColor="#fff"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"
+                                       FontSize="Body"/>
+                            </StackLayout >
+                            <StackLayout Grid.Column="1" 
+                                         Orientation="Vertical" 
+                                         HorizontalOptions="End">
+                                <Image x:Name="iconImg2"
+                                       WidthRequest="30"
+                                       HeightRequest="30"/>
+                                <Label x:Name="descriptionTxt2" 
+                                       TextColor="#fff"
+                                       VerticalOptions="Center"
+                                       FontSize="Body"/>
+                            </StackLayout>
+                        </Grid>
+                        <Grid Grid.Row="2" 
+                              Margin="0,10,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" 
+                                         Orientation="Horizontal"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="CenterAndExpand">
+                                <Label x:Name="timeTxt3"
+                                       TextColor="#fff"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"
+                                       FontSize="Body"/>
+                            </StackLayout >
+                            <StackLayout Grid.Column="1" 
+                                         Orientation="Vertical" 
+                                         HorizontalOptions="End">
+                                <Image x:Name="iconImg3"
+                                       WidthRequest="30"
+                                       HeightRequest="30"/>
+                                <Label x:Name="descriptionTxt3" 
+                                       TextColor="#fff"
+                                       VerticalOptions="Center"
+                                       FontSize="Body"/>
+                            </StackLayout>
+                        </Grid>
+                        <Grid Grid.Row="3" 
+                              Margin="0,10,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" 
+                                         Orientation="Horizontal"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="CenterAndExpand">
+                                <Label x:Name="timeTxt4"
+                                       TextColor="#fff"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"
+                                       FontSize="Body"/>
+                            </StackLayout >
+                            <StackLayout Grid.Column="1" 
+                                         Orientation="Vertical" 
+                                         HorizontalOptions="End">
+                                <Image x:Name="iconImg4"
+                                       WidthRequest="30"
+                                       HeightRequest="30"/>
+                                <Label x:Name="descriptionTxt4" 
+                                       TextColor="#fff"
+                                       VerticalOptions="Center"
+                                       FontSize="Body"/>
+                            </StackLayout>
+                        </Grid>
+                        <Grid Grid.Row="4" 
+                              Margin="0,10,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" 
+                                         Orientation="Horizontal"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="CenterAndExpand">
+                                <Label x:Name="timeTxt5"
+                                       TextColor="#fff"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"
+                                       FontSize="Body"/>
+                            </StackLayout >
+                            <StackLayout Grid.Column="1" 
+                                         Orientation="Vertical" 
+                                         HorizontalOptions="End">
+                                <Image x:Name="iconImg5"
+                                       WidthRequest="30"
+                                       HeightRequest="30"/>
+                                <Label x:Name="descriptionTxt5" 
+                                       TextColor="#fff"
+                                       VerticalOptions="Center"
+                                       FontSize="Body"/>
+                            </StackLayout>
+                        </Grid>
+                        <Grid Grid.Row="5" 
+                              Margin="0,10,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" 
+                                         Orientation="Horizontal"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="CenterAndExpand">
+                                <Label x:Name="timeTxt6"
+                                       TextColor="#fff"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"
+                                       FontSize="Body"/>
+                            </StackLayout >
+                            <StackLayout Grid.Column="1" 
+                                         Orientation="Vertical" 
+                                         HorizontalOptions="End">
+                                <Image x:Name="iconImg6"
+                                       WidthRequest="30"
+                                       HeightRequest="30"/>
+                                <Label x:Name="descriptionTxt6" 
+                                       TextColor="#fff"
+                                       VerticalOptions="Center"
+                                       FontSize="Body"/>
+                            </StackLayout>
+                        </Grid>
+                        <Grid Grid.Row="6" 
+                              Margin="0,10,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" 
+                                         Orientation="Horizontal"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="CenterAndExpand">
+                                <Label x:Name="timeTxt7"
+                                       TextColor="#fff"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"
+                                       FontSize="Body"/>
+                            </StackLayout >
+                            <StackLayout Grid.Column="1" 
+                                         Orientation="Vertical" 
+                                         HorizontalOptions="End">
+                                <Image x:Name="iconImg7"
+                                       WidthRequest="30"
+                                       HeightRequest="30"/>
+                                <Label x:Name="descriptionTxt7" 
+                                       TextColor="#fff"
+                                       VerticalOptions="Center"
+                                       FontSize="Body"/>
+                            </StackLayout>
+                        </Grid>
+                        <Grid Grid.Row="7" 
+                              Margin="0,10,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" 
+                                         Orientation="Horizontal"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="CenterAndExpand">
+                                <Label x:Name="timeTxt8"
+                                       TextColor="#fff"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"
+                                       FontSize="Body"/>
+                            </StackLayout >
+                            <StackLayout Grid.Column="1" 
+                                         Orientation="Vertical" 
+                                         HorizontalOptions="End">
+                                <Image x:Name="iconImg8"
+                                       WidthRequest="30"
+                                       HeightRequest="30"/>
+                                <Label x:Name="descriptionTxt8" 
+                                       TextColor="#fff"
+                                       VerticalOptions="Center"
+                                       FontSize="Body"/>
+                            </StackLayout>
+                        </Grid>
+                    </Grid>
+                    </ScrollView>
+            </Grid>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

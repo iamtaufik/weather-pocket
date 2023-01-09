@@ -95,12 +95,35 @@
         public int sunrise { get; set; }
         public int sunset { get; set; }
     }
-
+    
     public class Weather
     {
         public int id { get; set; }
         public string main { get; set; }
         public string description { get; set; }
         public string icon { get; set; }
+    }
+
+    public class Forecast
+    {
+        public string cod { get; set; }
+        public string message { get; set; }
+        public int cnt { get; set; }
+        public ForecastItem[] list { get; set; }
+        public City city { get; set; }
+    }
+
+    public class ForecastItem
+    {
+        public double dt { get; set; }
+        public Main main { get; set; }
+        public Weather[] weather { get; set; }
+        public Clouds clouds { get; set; }
+        public Wind wind { get; set; }
+        public double visibility { get; set; }
+        public float pop { get; set; }
+        public Sys sys { get; set; }
+        public string dt_txt { get; set; }
+        
     }
 }

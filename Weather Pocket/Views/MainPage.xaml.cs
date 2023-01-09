@@ -1,10 +1,12 @@
-﻿using Weather_Pocket.Models;
-using Weather_Pocket.Helper;
-using System;
+﻿using System;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Newtonsoft.Json;
+using System.Globalization;
+using Weather_Pocket.Models;
+using Weather_Pocket.Helper;
+
 
 namespace Weather_Pocket.Views
 {
@@ -20,11 +22,20 @@ namespace Weather_Pocket.Views
                 Navigation.PushModalAsync(new OnboardingPage());
             }
         }
-        private string Location = "Yogyakarta";
 
+        CultureInfo idID = new CultureInfo("id-ID");
         private double Latitude { get; set; }
         private double Longitude { get; set; }
 
+        private void SearchCommand(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new SearchPage(),true);
+        }
+
+        private void NextPage(object sender,EventArgs e)
+        {
+            Navigation.PushModalAsync(new ForecastPage(), true);
+        }
 
         private async void GetLocation()
         {
@@ -75,9 +86,7 @@ namespace Weather_Pocket.Views
                     pressureTxt.Text = $"{weatherInfo.main.pressure} hpa";
                     windTxt.Text = $"{weatherInfo.wind.speed} m/s";
                     cloudinessTxt.Text = $"{weatherInfo.clouds.all}%";
-
-                    var dt = new DateTime().ToUniversalTime().AddSeconds(weatherInfo.dt);
-                    dateTxt.Text = dateTxt.Text = DateTime.Now.ToString("dddd, dd MMMM").ToUpper();
+                    dateTxt.Text =  DateTime.Now.ToString("dddd, dd MMMM",idID).ToUpper();
 
                     //GetForecast();
                 }

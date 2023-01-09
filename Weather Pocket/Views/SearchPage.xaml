@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Weather_Pocket.Views.SearchPage"
+             xmlns:viewModels="clr-namespace:Weather_Pocket.ViewModels">
+    
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <BoxView Grid.RowSpan="2" 
+                     BackgroundColor="#ABABAB" 
+                     HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="FillAndExpand"/>
+                <Image x:Name="bgImg" 
+                   Aspect="AspectFill" 
+                   Grid.RowSpan="2" 
+                   Source="bg.png" 
+                   HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="End"/>
+                <SearchBar x:Name="searchBar"
+                           Placeholder="Cari..."
+                          SearchButtonPressed="OnSearchButtonPressed"
+                           TextColor="#fff"
+                           PlaceholderColor="#fff" 
+                           CancelButtonColor="#fff"/>
+                <Grid Grid.Row="1">
+                    <StackLayout Spacing="20">
+                        <StackLayout Orientation="Horizontal" 
+                                     Margin="0,50,0,0" 
+                                     Spacing="50" 
+                                     HorizontalOptions="Center">
+                            <StackLayout VerticalOptions="Center">
+                                <Label x:Name="SearchTerm" TextColor="#fff"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout >
+                    <StackLayout Spacing="80"
+                                 Margin="6,50,0,0">
+                        <Label x:Name="cityText"
+                               FontSize="Title"
+                               TextColor="#fff" 
+                               FontAttributes="Bold" />
+                    </StackLayout>
+                    <Grid WidthRequest="320" 
+                          ColumnSpacing="10" 
+                          Margin="0,150,0,0"
+                          HorizontalOptions="CenterAndExpand" 
+                          >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Spacing="7" 
+                                         Orientation="Vertical"
+                                         HorizontalOptions="CenterAndExpand"
+                                         VerticalOptions="FillAndExpand" >
+                                <Label x:Name="labelText1"
+                                   TextColor="#fff"
+                                   FontSize="Body"/>
+                                <Image x:Name="imgIcon1"
+                                       WidthRequest="35"
+                                       HeightRequest="35"/>
+                                <StackLayout Orientation="Horizontal" 
+                                            HorizontalOptions="Center" 
+                                            Spacing="0">
+                                    <Label x:Name="tempratureTxt1"
+                                           TextColor="#fff"
+                                           FontSize="Caption"
+                                           HorizontalTextAlignment="Center"/>
+                                    <Label x:Name="degreText1"
+                                           TextColor="White" 
+                                           FontSize="Caption" 
+                                           HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout Spacing="7"
+                                         Grid.Column="1"
+                                         Orientation="Vertical"
+                                         HorizontalOptions="CenterAndExpand"
+                                         VerticalOptions="FillAndExpand" >
+                                <Label x:Name="labelText2"
+                                   TextColor="#fff"
+                                   FontSize="Body"/>
+                                <Image x:Name="imgIcon2"
+                                       WidthRequest="35"
+                                       HeightRequest="35"/>
+                                <StackLayout Orientation="Horizontal" 
+                                            HorizontalOptions="Center" 
+                                            Spacing="0">
+                                    <Label x:Name="tempratureTxt2"
+                                           TextColor="#fff"
+                                           FontSize="Caption"
+                                           HorizontalTextAlignment="Center"/>
+                                    <Label x:Name="degreText2"
+                                           TextColor="White" 
+                                           FontSize="Caption" 
+                                           HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout Spacing="7"
+                                         Grid.Column="2"
+                                         Orientation="Vertical"
+                                         HorizontalOptions="CenterAndExpand"
+                                         VerticalOptions="FillAndExpand" >
+                                <Label x:Name="labelText3"
+                                   TextColor="#fff"
+                                   FontSize="Body"/>
+                                <Image x:Name="imgIcon3"
+                                       WidthRequest="35"
+                                       HeightRequest="35"/>
+                                <StackLayout Orientation="Horizontal" 
+                                            HorizontalOptions="Center" 
+                                            Spacing="0">
+                                    <Label x:Name="tempratureTxt3"
+                                           TextColor="#fff"
+                                           FontSize="Caption"
+                                           HorizontalTextAlignment="Center"/>
+                                    <Label x:Name="degreText3"
+                                           TextColor="White" 
+                                           FontSize="Caption" 
+                                           HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout Spacing="7"
+                                         Grid.Column="3"
+                                         Orientation="Vertical"
+                                         HorizontalOptions="CenterAndExpand"
+                                         VerticalOptions="FillAndExpand" >
+                                <Label x:Name="labelText4"
+                                   TextColor="#fff"
+                                   FontSize="Body"/>
+                                <Image x:Name="imgIcon4"
+                                       WidthRequest="35"
+                                       HeightRequest="35"/>
+                                <StackLayout Orientation="Horizontal" 
+                                            HorizontalOptions="Center" 
+                                            Spacing="0">
+                                    <Label x:Name="tempratureTxt4"
+                                           TextColor="#fff"
+                                           FontSize="Caption"
+                                           HorizontalTextAlignment="Center"/>
+                                    <Label x:Name="degreText4"
+                                           TextColor="White" 
+                                           FontSize="Caption" 
+                                           HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
