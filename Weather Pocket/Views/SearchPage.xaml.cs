@@ -61,10 +61,10 @@ namespace Weather_Pocket.Views
                     imgIcon3.Source = $"w{forecast.list[14].weather[0].icon}";
                     tempratureTxt3.Text = forecast.list[14].main.temp.ToString("0"); 
                     
-                    labelText4.Text = DateTime.Parse(forecast.list[18].dt_txt).ToLocalTime().ToString("dddd", idID);
+                    labelText4.Text = DateTime.Parse(forecast.list[20].dt_txt).ToLocalTime().ToString("dddd", idID);
                     degreText4.Text = "°";
-                    imgIcon4.Source = $"w{forecast.list[18].weather[0].icon}";
-                    tempratureTxt4.Text = forecast.list[18].main.temp.ToString("0");
+                    imgIcon4.Source = $"w{forecast.list[20].weather[0].icon}";
+                    tempratureTxt4.Text = forecast.list[20].main.temp.ToString("0");
                     
 
                 }
